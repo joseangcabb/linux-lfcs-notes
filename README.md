@@ -59,3 +59,24 @@ man -k user |
 man 1 user
 man -l user | grep 8  # Filter only lines containing 8.
 ```
+
+### Other systems for help
+The documentation can also be seen with 'pinfo'.
+``` sh
+pinfo '(coreutils) ls invocation'
+```
+
+Docs for packages and programs in /usr/share/doc
+``` sh
+cd /usr/share/doc
+ls
+cd <program>
+```
+
+tldr, display simple documentation with examples
+``` sh
+sudo pacman -S tldr
+tldr ls
+tldr git commit
+tldr grep
+```
