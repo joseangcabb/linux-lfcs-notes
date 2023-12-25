@@ -80,3 +80,32 @@ tldr ls
 tldr git commit
 tldr grep
 ```
+
+### Update hostname
+``` sh
+# Search short descriptions and manual pages for hostname.
+man -k hostname
+
+# Manual pages for hostnamectl.
+man hostnamectl
+
+# More concie information than manual pages.
+hostnamectl --help
+
+# Set system hostname
+hostnamectl hostname Archlinux
+
+# Display current values
+hostnamectl status
+```
+
+### IP setup
+``` sh
+ip --help
+ip link help
+
+ip address
+
+sudo ip link set wlan0 down
+sudo ip link set wlan0 up
+```
