@@ -55,3 +55,15 @@ ls a[a-e]*  # List all files starting with 'aa', 'ab', 'ac', 'ad', or 'ae'.
 touch file{1..100}  # Create 100 files, from file1 to file100.
 mkdir /data/{sales,account}  # Create two directories in the /data folder.
 ```
+
+### Copy files and directories
+
+``` sh
+cp file1 dest_file  # Copy file to another location.
+cp dir1/ dest_dir/  # Copy a directory.
+cp file1 dest_dir/  # Copy a file into a directory.
+cp file1 file2 dest_dir/  # Copy many files into a directory.
+cp -p file1 dest_file  # Copy a file and preserve its attributes (like timestamp).
+cp -v file1 new_file  # Verbose mode.
+cp -i file1 file2  # Interactive mode.
+```
