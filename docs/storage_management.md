@@ -90,4 +90,5 @@ mount /dev/sda4 /mnt/home
 # Verify that a device is mounted
 mount
 mount | grep '^/dev'
+findmnt
 ```
