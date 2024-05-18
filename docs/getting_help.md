@@ -33,7 +33,7 @@ man 1 user
 man -l user | grep 8  # Filter only lines containing 8.
 ```
 
-### Other systems for help
+## Help from other sources
 The documentation can also be seen with 'pinfo'.
 ``` sh
 pinfo '(coreutils) ls invocation'
