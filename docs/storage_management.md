@@ -1,8 +1,19 @@
 # Storage management
 
-``` sh
+In Linux, the `lsblk -al` command is used to list all block devices, providing a detailed overview of the system's storage. Here's how it works:
+
+```sh
 lsblk -al  # Display all block devices.
 ```
+
+The output of this command includes several columns, each providing specific information about each block device:
+- `NAME`: The device name.
+- `MAJ:MIN`: The major and minor device number. This is a unique identifier for the device in the system.
+- `RM`: This indicates whether the device is removable (1) or not (0).
+- `SIZE`: The size of the device. This is the total storage capacity of the device.
+- `RO`: This indicates whether the device is read-only. A value of 1 means it's read-only, and 0 means it's read-write.
+- `TYPE`: This indicates the type of the device. It could be a disk, part (partition), lvm (Logical Volume Manager), etc.
+- `MOUNTPOINT`: This is the mount point of the device if applicable. It's the directory in the system's file hierarchy where the storage of the device is made accessible.
 
 ## Partition schemas
 
@@ -48,7 +59,7 @@ n  # Create a new partition
 8300  # Hex code for Linux filesystem
 
 cat /proc/partitions  # Display partitions that are currently active in the system.
-partprobe  # Informs the operating system kernel about changes to the partition table.
+partprobe  # Informs the operating system kernel about changes to the partition table. This is usually used if the disk is already mounted.
 
 ```
 
@@ -86,9 +97,20 @@ mkdir -p /mnt/home
 mount /dev/sda4 /mnt/home
 ```
 
+## Verify that a device is mounted
 ``` sh
-# Verify that a device is mounted
 mount
-mount | grep '^/dev'
-findmnt
+mount | grep '/mnt'
+
+findmnt  # Display using a tree view.
+```
+
+## Unmount
+``` sh
+umount /mnt/boot/efi
+umount -R /mnt
+
+# Error unmounting when device is busy
+# The `lsof` command in Linux stands for "List Open Files". It's used to identify which processes are using a file, directory, or device.
+lsof /mnt
 ```
