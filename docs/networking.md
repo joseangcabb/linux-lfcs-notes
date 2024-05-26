@@ -117,7 +117,7 @@ nmap -sn 192.168.1.0/24
 
 ### NetworkManager
 
-Installations
+Install package and enable the service.
 ``` sh
 sudo pacman -S networkmanager
 
@@ -125,6 +125,7 @@ sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
 ```
 
+Set up a connection.
 ``` sh
 sudo nmcli --ask device wifi connect MY_NETWORK
 sudo nmcli connection modify MY_NETWORK connection.autoconnect yes
