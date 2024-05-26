@@ -1,12 +1,6 @@
 # Storage management
 
 In Linux, the `lsblk -al` command is used to list all block devices, providing a detailed overview of the system's storage. Here's how it works:
-
-```sh
-lsblk -al  # Display all block devices.
-```
-
-The output of this command includes several columns, each providing specific information about each block device:
 - `NAME`: The device name.
 - `MAJ:MIN`: The major and minor device number. This is a unique identifier for the device in the system.
 - `RM`: This indicates whether the device is removable (1) or not (0).
@@ -14,6 +8,10 @@ The output of this command includes several columns, each providing specific inf
 - `RO`: This indicates whether the device is read-only. A value of 1 means it's read-only, and 0 means it's read-write.
 - `TYPE`: This indicates the type of the device. It could be a disk, part (partition), lvm (Logical Volume Manager), etc.
 - `MOUNTPOINT`: This is the mount point of the device if applicable. It's the directory in the system's file hierarchy where the storage of the device is made accessible.
+
+```sh
+lsblk -al  # Display all block devices.
+```
 
 ## Partition schemas
 
