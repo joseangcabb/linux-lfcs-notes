@@ -5,6 +5,7 @@ The Linux Foundation Certified System Administrator (LFCS) certification is a pr
 - [Getting help](docs/getting_help.md)
 - [File management](docs/file_management.md)
 - [Storage management](docs/storage_management.md)
+- [Networking](docs/networking.md)
 
 ## Administrator privileges
 Members of the 'wheel' group are granted the ability to execute commands with elevated privileges.
