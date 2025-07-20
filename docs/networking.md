@@ -127,6 +127,7 @@ sudo systemctl start NetworkManager
 
 Set up a connection.
 ``` sh
+nmcli device wifi list
 sudo nmcli --ask device wifi connect MY_NETWORK
 sudo nmcli connection modify MY_NETWORK connection.autoconnect yes
 ```
